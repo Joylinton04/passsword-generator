@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>password generator</h2>
+        <div class="wrapper">
+            <input type="text">
+            <span class="copy"><i class="fa fa-clone" aria-hidden="true"></i></span>
+        </div>
+        <div class="password-indicator"></div>
+        <div class="password-length">
+            <div class="details">
+                <label>password length</label>
+                <span></span><br>
+            </div>  
+            <input type="range" min="1" max="30" value="5" step="1">
+        </div>
+        <div class="password-settings">
+            <span>password settings</span>
+            <div class="settings">
+                <ul class="options">
+                    <li>
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">lowercase (a-z)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="uppercase">
+                        <label for="uppercase">uppercase (A-Z)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="numbers">
+                        <label for="numbers">numbers (0-9)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="symbol">
+                        <label for="symbol">symbol (!$/)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="exc-duplicate">  
+                        <label for="Exclude Duplicate">Exclude Duplicate</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="spaces">
+                        <label for="include spaces">include spaces</label>
+                    </li>
+                </ul>
+            </div>
+            <button id="btn">generate password</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

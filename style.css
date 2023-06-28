@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 500px;
+    padding: 15px
+}
+
+h2 {
+    text-transform: capitalize;
+    padding: 0.5em 0 0.8em 1em;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.wrapper {
+    padding: 1em 0 1em 1em;
+    position: relative;
+}
+
+.wrapper input {
+    width: 90%;
+    font-size: 1em;
+    padding: 10px;
+    letter-spacing: 1.2px;
+}
+
+.wrapper span {
+    position: absolute;
+    font-size: 1.2em;
+    right: 30px;
+    top: 20px;
+}
+
+
+.password-indicator {
+    width: 100%;
+    margin: 0.75em 0 0.75em 0;
+    padding: 1px;
+    height: 2px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.password-indicator::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.copy {
+    color: #43a047;
+}
+
+.password-indicator#weak::before {
+    width: 30%;
+    background-color: #e64a4a
+}
+
+.password-indicator#medium::before {
+    width: 50%;
+    background-color: #f1c80b;
+}
+.password-indicator#strong::before {
+    width: 100%;
+    background-color: #43a047;
+}
+
+
+.password-length {
+    margin: 1rem 0 0.75rem;
+    padding: 5px;
+}
+
+.password-length .details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-length label {
+    text-transform: capitalize;
+}
+
+.password-length input {
+    width: 100%;
+    height: 4px;
+}
+
+.password-settings span {
+    text-transform: capitalize;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+} 
+
+.options {
+    margin-top: 0.5em;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.options li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100% / 2);
+}
+
+.options li input {
+    height: 20px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.options li label {
+    padding: 0 0 0 0.75em;
+    cursor: pointer;
+}
+
+#btn {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: #43a047;
+    color: #fff
+}
+
+#btn:focus {
+    border: 1px solid #f1c80b;
+}
